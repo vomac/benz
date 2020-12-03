@@ -1,0 +1,248 @@
+@keyframes opacity {
+    0% {opacity:0}
+    100% {opacity:1}
+  }
+figure img{opacity:0}
+#special_offers figure img{opacity:1}
+
+/* page2_top */
+#page2_top{width:100%;position: relative;}
+#page2_top h2{font: normal 400 35px/1 "corporate";color:#222;padding-bottom:15px}
+#page2_top p{font: normal 400 12px/1.5 "Arial",sans-serif;padding-bottom:15px}
+.top_wrap{width:1440px;height:400px;left:50%;transform: translateX(-50%);position: relative;}
+.top_wrap figure{width:100%;height:100%;display:block;transition:all 0.4s}
+.top_wrap figure img{width:100%;animation :opacity 2s ease forwards}
+.top_text_wrap{width: 100%;height:200px;position: absolute;top:50px;}
+.top_text_con{width: 81.25%;max-width: 1170px;margin:0 auto;}
+.top_text_wrap .hero_btn .btn_point , .top_text_wrap .hero_btn .btn_normal  {padding:5px 10px;margin-right:15px}
+
+/* page2_lnb */
+#m_page2_lnb{display:none}
+#page2_lnb{width:100%;height:auto;box-sizing: border-box;background:#fff;}
+
+.page2_lnb_wrap{width: 81.25%;max-width: 1170px;margin:0 auto}
+.page2_lnb_wrap ul{display:flex;align-items: center;color:#222;border-bottom:1px solid #c7c7c7;text-align: center;font: normal 400 12px/1.5 "Arial",sans-serif;}
+.page2_lnb_wrap ul li{width:25%;position:relative;}
+.page2_lnb_wrap ul li.blueline2{border-bottom:3px solid rgb(0, 144, 255);}
+.page2_lnb a.active{color:rgb(0, 144, 255);} 
+.page2_lnb_wrap ul li a{display:block;padding:20px 30px;color:#222;}
+.page2_lnb_wrap ul li a:hover{color:rgb(0, 144, 255);}
+.page2_lnb_wrap ul li::after{border-right: 1px solid #c7c7c7;content: '';height: 28px;position: absolute;right: 0;top: 30%;}
+.page2_lnb_wrap ul li:last-child::after{border:none}
+
+
+
+/* .nav_link{position: relative;}
+.nav_link::before{content: '';border-bottom: 3px solid rgb(0, 144, 255);bottom: 0px;left: 0;right: auto;
+  top: auto;transition: width 200ms ease-in-out;position: absolute;width:0%;}
+.nav_link.nav_current::before{width:100%}
+.nav_link.nav_current{color:rgb(0, 144, 255)} */
+
+
+
+/*intro*/
+
+#intro{width:100%;padding:50px 0 0px}
+.intro_wrap{width:81.25%;max-width: 1170px;margin:0 auto}
+.intro_li{display:flex;justify-content: space-between;padding:30px 0;align-items: center;}
+.intro_text_wrap{width:40%;}
+.intro_text_wrap sup{font: normal 400 11px/11px "Arial",sans-serif;color: #176db7;padding-left:5px}
+
+.intro_text_wrap h5{font:normal 700 14px/1.83333 "Arial",sans-serif;margin-top:10px}
+.intro_text_wrap p{font:normal 400 12px/1.83333 "Arial",sans-serif;margin-top:10px;margin-bottom:30px;word-break: keep-all;}
+
+.intro_li figure{width:48.5%;position: relative;}
+.intro_li figure img{width:100%;}
+#intro_img_video{animation :opacity 2s 0.2s ease forwards}
+.icon_play{border-radius: 50%;border: 2px solid #fff;width: auto;height: 75px;max-height: 80%;left: 50%;
+    position: absolute;top: 50%;transform: translate(-50%, -50%);}
+.icon_circle{opacity: 0.5;fill: #010101;}
+.icon_triangle{fill: #fff;}
+
+.intro_li:last-child{display:flex;flex-direction: row-reverse;justify-content: space-between;padding:30px 0}
+.text_btn{display: block;}
+.intro_text_wrap .hero_btn a.text_btn{font:normal 400 12px/1.83333 "Arial",sans-serif;color:#176db7;padding-bottom:15px}
+.intro_text_wrap .hero_btn a.text_btn:link{color:#176db7;text-decoration: none;}
+.intro_text_wrap .hero_btn .btn_point{padding:5px 10px}
+
+/* special_offers */
+#special_offers{width:100%;padding:100px 0 70px;transition:all 0.3s;}
+#special_offers h2{font: normal 400 32px/1 "corporate";color:#222;padding-bottom:15px;text-align: center;}
+#special_offers > p{font:normal 400 12px/1.83333 "Arial",sans-serif;margin-top:10px;margin-bottom:30px;width:40%;text-align: center;margin:0 auto;margin-bottom:30px}
+.special_offers_ul{width:81.25%;max-width: 1170px;margin:0 auto}
+.special_offers_ul li{display:flex;justify-content: space-between;align-items: center;padding:30px 0;border-top:1px solid #c7c7c7 }
+
+
+.page2_li_left{display:flex;align-items: center;}
+
+.page2_li_left h3{font: normal 400 18px/1.33333 "corpos";padding-bottom:30px}
+.page2_li_left h4{font: normal 400 13px/1.53846 "Arial",sans-serif;}
+.special_offers_text_wrap .info{font: normal 400 26px/32px "corpos";}
+.special_offers_text_wrap .info i{font-style: normal;font: normal 400 14px/1.5 "Arial",sans-serif;}
+.special_offers_text_wrap .info sup{font: normal 400 11px/2.18182 "Arial",sans-serif;color: #176db7;}
+.special_offers_text_wrap  p{font: normal 400 12px/1.83333 "Arial",sans-serif;}
+
+.special_offers_ul{border-bottom:1px solid #c7c7c7}
+
+
+.page2_li_left figure{width:373.39px;padding-right:30px}
+.page2_li_left figure img{width:100%;}
+.page2_li_right .hero_btn{display:flex;flex-direction: column;}
+.page2_li_right .hero_btn a.text_btn{font:normal 400 12px/1.83333 "Arial",sans-serif;color:#176db7;padding-bottom:15px;text-align: center;padding-top:15px;}
+.text_btn::after{content: "";font-family:"nafta-icons";font-size:15px;padding-left:10px}
+.page2_li_right .btn_point {padding:5px 40px}
+.intro_li .intro_text_wrap .hero_btn a.text_btn::after{content:""}
+.page2_li_right .hero_btn a.text_btn:hover{color:rgb(0, 144, 255);}
+
+
+/* certification */
+
+#certification{transition:all 0.3s;padding-top:100px}
+#certification h2{font: normal 400 32px/1 "corporate";color:#222;padding-bottom:15px;text-align: center;}
+#certification > p{font:normal 400 12px/1.83333 "Arial",sans-serif;margin-top:10px;margin-bottom:30px;width:50%;text-align: center;margin:0 auto;margin-bottom:30px}
+
+.certification_wrap{width:81.25%;max-width: 1170px;margin:0 auto;padding-bottom:70px;border-bottom: 1px solid #c7c7c7;}
+.certification_wrap figure{width:100%}
+.certification_wrap figure img{width:100%;margin-bottom:30px}
+.certification_text_wrap{width:100%;position: relative;}
+.certification_text_con{margin-left:17%}
+.certification_text_con h5{font: normal 700 12px/1.83333 "Arial",sans-serif;margin-left:-15px;padding-bottom:30px}
+.certification_text_con ul li{list-style:disc;font: normal 400 12px/1.83333 "Arial",sans-serif;}
+
+.certification_text_wrap::before{border: none;border-bottom: 1px solid #dadada;margin-left: 0;text-align: left;
+width: 30px;content: '';left: 0;position: absolute;top: 0;}
+
+
+/* warranty */
+#warranty {padding-top:100px;}
+#warranty h2{font: normal 400 32px/1 "corporate";color:#222;padding-bottom:40px;text-align: center;}
+.warranty_wrap{width:81.25%;max-width: 1170px;margin:0 auto;display: flex;justify-content: space-between;align-items: center;}
+.warranty_text h5{font:normal 700 14px/1.83333 "Arial",sans-serif;margin-top:10px}
+.warranty_text p{font:normal 400 12px/1.83333 "Arial",sans-serif;margin-top:10px;margin-bottom:30px;word-break: keep-all;}
+.warranty_text {width:40%}
+.warranty_text sup{font: normal 400 11px/11px "Arial",sans-serif;color: #176db7;padding-left:5px}
+.warranty_wrap figure{width:48%}
+.warranty_wrap figure img{width:100%}
+
+
+/* Additional Benefits */
+#benefits{width:100%;padding-top:100px}
+#benefits h2{font: normal 400 32px/1 "corporate";color:#222;padding-bottom:40px;text-align: center;}
+.benefits_wrap{width:81.25%;max-width: 1170px;margin:0 auto;}
+.benefits_wrap ul{display: flex;justify-content: space-between;}
+.benefits_wrap ul li{/*margin-right: 2.12766%;*/width: 31.91489%;}
+.benefits_wrap ul li:last-child{margin-right:0}
+.benefits_wrap ul li figure{width:100%}
+.benefits_wrap ul li figure img{width:100%;margin-bottom:15px}
+.benefits_wrap h5{font:normal 700 14px/1.83333 "Arial",sans-serif;}
+.benefits_wrap p{font:normal 400 12px/1.83333 "Arial",sans-serif;margin-top:10px;word-break: keep-all;}
+.benefits_wrap sup{font: normal 400 11px/11px "Arial",sans-serif;color: #176db7;padding-left:5px}
+
+
+/* find_cpo */
+
+#find_cpo{width:100%;background:#f1f1f1;margin:70px 0 100px}
+.find_cpo_wrap{width:81.25%;max-width: 1170px;margin:0 auto;display: flex;justify-content: space-between;align-items: center;padding:90px 0}
+.find_cpo_wrap figure{width:31.91489%;}
+.find_cpo_wrap figure img{width:100%;}
+.find_cpo_text_wrap {width:60%}
+.find_cpo_text_wrap h2{font: normal 400 32px/1 "corporate";color:#222;padding-bottom:30px}
+.find_cpo_text_wrap p{font:normal 400 12px/1.83333 "Arial",sans-serif;margin-top:10px;margin-bottom:30px;word-break: keep-all;}
+
+
+
+.top_text_wrap_forphone{display: none}
+
+
+@media screen and (min-width:980px) and (max-width: 1330px) {
+
+  #special_offers > p{width:60%}
+
+}
+
+@media screen and (min-width:768px) and (max-width: 979px) {
+    .page2_lnb_wrap, .intro_wrap, .certification_wrap,.warranty_wrap,.benefits_wrap,.find_cpo_wrap {width: 91.14583%;margin: 0 auto;}
+    
+    .m_gnb_blank{width:40px}
+    #page2_top{padding-top:60px}
+    .top_text_wrap{width: 100%;height:200px;position: absolute;top:100px;}
+    .top_text_con{width: 81.25%;max-width: 1170px;margin:0;padding-left:8%;}
+    #page2_top h2{font: normal 400 30px/1 "corporate";padding-bottom:20px}
+    #page2_top p{font: normal 400 12px/1.5 "Arial",sans-serif;padding-bottom:15px}
+    .page2_li_left figure{width:223.39px;padding-right:10px}
+    .page2_li_left{align-items: flex-start}
+    .special_offers_ul{width: 91.14583%;margin: 0 auto;}
+    .top_text_wrap_forphone{display: none}
+    #special_offers > p{width:60%}
+}
+
+@media screen and (max-width: 767px) {
+    .page2_lnb_wrap, .intro_wrap, .certification_wrap,.warranty_wrap,.benefits_wrap,.find_cpo_wrap,.special_offers_ul {width: 93.4375%;margin: 0 auto;}
+    #page2_top .top_text_wrap_forphone .hero_btn .btn_normal{margin-left:10px}
+    #page2_top .top_text_wrap_forphone .hero_btn .btn_point,  #page2_top .top_text_wrap_forphone .hero_btn .btn_normal{padding: 5px 20px}
+    .top_wrap{width:100%;height:auto;padding-top:60px;    display: flex;
+    flex-direction: column;}
+    .top_text_wrap{top: 210px;height:inherit;text-align: center;display:none}
+    .top_text_con{text-align: center}
+    .top_wrap figure{height: auto}
+    
+    
+    .top_text_wrap_forphone{display:block;padding: 25px 0;}
+    
+    #page2_lnb{display:none}
+    #m_page2_lnb{display:block;}
+   
+    #m_page2_lnb div{height:66px;line-height:66px;border-top:1px solid #c7c7c7;border-bottom:1px solid #c7c7c7;text-align:center;color: #222;cursor: pointer;}
+    #m_page2_lnb div:hover{color: #176db7;cursor: pointer;}
+
+    #m_page2_lnb_ul{display:none;}
+    #m_page2_lnb_arrow{font-family:"nafta-icons";font-size:15px;margin-left:15px;font-style: normal;transition: all 0.5s;display:inline-block;color: #176db7}
+
+    #m_page2_lnb_ul li{line-height:66px;text-align: center;border-bottom:1px solid #eee}
+    #m_page2_lnb_ul li a{color:#222;height: 66px;width: 100%;display: block;}
+    .m_page2_lnb_t{height:44px;cursor: pointer}
+  
+    .intro_wrap{width: 93.4375%;margin: 0 auto;}
+    .intro_li{display:flex;flex-direction: column;}
+    .intro_li:first-child{flex-direction: column-reverse;}
+    .intro_li:last-child{flex-direction:column-reverse;}
+    .intro_text_wrap{width:100%;display: flex;flex-direction: column;justify-content: center;align-items: center;}
+    .intro_li figure{width:100%;padding-bottom:20px}
+
+
+    #special_offers > p , #certification > p{width:95%}
+    .special_offers_ul li{flex-direction: column;}
+    .special_offers_ul li:last-child{padding-bottom:50px}
+    .page2_li_left{display:flex;flex-direction: column;width:100%}
+    .page2_li_left figure{padding-bottom:30px;width:100%;
+    padding-right: 0px;}
+    .special_offers_text_wrap{text-align: center}
+    .page2_li_right{width:100%}
+    .page2_li_right .hero_btn {padding-top:30px}
+    .page2_li_right .hero_btn .btn_point {padding:5px 0px;width: 100%;display: block;text-align: center;}
+    .page2_li_right .text_btn {color:#176db7;}
+    
+    #warranty{padding-top:70px}
+    .warranty_wrap{flex-direction:column-reverse;}
+    .warranty_text{width:100%;display: flex;flex-direction: column;
+    justify-content: center;align-items: center;}
+    .warranty_wrap figure{width:100%;padding-bottom:20px}
+    .warranty_wrap{padding-bottom:70px;border-bottom:1px solid #c7c7c7}
+    
+
+    #benefits{padding-top:70px}
+    .benefits_wrap ul{flex-direction: column}
+    .benefits_wrap ul li{margin: 0px 0px 30px 0;width: 100%;display: flex;flex-direction: column;justify-content: center;align-items: center;}
+    
+    .find_cpo_wrap{flex-direction:column;}
+    .find_cpo_wrap figure{width:100%;padding-bottom:30px}
+    .find_cpo_text_wrap{width:100%;display: flex;flex-direction: column;justify-content: center;align-items: center;}
+    .find_cpo_text_wrap p{padding-top:0px}
+    .find_cpo_text_wrap h2{padding-bottom:20px}
+      #certification{ padding-top: 0px;}
+    
+
+      .intro_li .hero_btn .text_btn::after{content:""}
+      .intro_li .hero_btn{display: flex;flex-direction: column;}
+
+}

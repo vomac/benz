@@ -1,0 +1,1189 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>신지혜_Mercedes-Benz USA</title>
+    
+   
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+   
+    
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css"/>
+    <link rel="stylesheet" href="css/index.css">
+    
+
+<script> 
+//gnb클릭시 하단메뉴 나타남
+$( document ).ready( function() {
+        
+$('.gnb_menu > a').click(function() {
+	$(this).parent().siblings().children('ul').slideUp('fast');
+	$(this).next('ul').slideToggle(300);
+	return false;
+});
+        
+   
+    });
+   
+//gnb 바깥쪽 아무곳이나 클릭하면 메뉴 닫힘
+$(document).on("click", function(event){
+        var $trigger = $(".gnb_menu");
+        if($trigger !== event.target && !$trigger.has(event.target).length){
+            $(".gnb_menu > ul").slideUp("fast");
+            $(".gnb_menu > a").removeClass('active');
+            $(".gnb_menu > a").parent('li').removeClass('blueline');
+        }            
+});   
+
+    
+//gnb클릭시 해당메뉴 활성화 및 하단 블루라인 생성..다음엔 a태그 활성화시 하단 선도 생기도록 코드를 수정!    
+$( document ).ready( function() {
+      
+$('.gnb_menu > a').click(function() {
+ if(!$(this).hasClass('active')===true){
+  $(this).parent().siblings().children('a').removeClass('active');
+  $('.gnb_menu > a').parent('li').removeClass('blueline');
+  $(this).addClass('active');
+  $(this).parent('li').addClass('blueline');
+  
+ }else{$(this).removeClass('active');
+       $(this).parent('li').removeClass('blueline')
+ }
+
+
+});
+  });
+
+
+ //모바일메뉴목록 펼침시 우측 화살표 회전
+ var mNavOpenState = 0;
+
+function arrowRotate6() {
+
+   if ( mNavOpenState == 0) {  
+
+      document.getElementById("arrow6").style = " transform: rotate(180deg);";
+      mNavOpenState = 1;
+       
+   }
+    else { document.getElementById("arrow6").style = " transform: rotate(0deg); ";
+
+      mNavOpenState = 0;
+   }
+}
+
+//footer 목록 펼침시 우측 화살표 회전..구식의 방법....ㅠㅠ
+var footNavOpenState = 0;
+
+function arrowRotate() {
+
+   if ( footNavOpenState == 0) {  
+
+      document.getElementById("arrow5").style = " transform: rotate(180deg);";
+      footNavOpenState = 1;
+       
+   }
+    else { document.getElementById("arrow5").style = " transform: rotate(0deg); ";
+
+      footNavOpenState = 0;
+   }
+}
+
+var footNavOpenState = 0;
+
+function arrowRotate1() {
+
+   if ( footNavOpenState == 0) {  
+
+      document.getElementById("arrow1").style = " transform: rotate(180deg);";
+      footNavOpenState = 1;
+       
+   }
+    else { document.getElementById("arrow1").style = " transform: rotate(0deg); ";
+
+      footNavOpenState = 0;
+   }
+}
+
+var footNavOpenState = 0;
+
+function arrowRotate2() {
+
+   if ( footNavOpenState == 0) {  
+
+      document.getElementById("arrow2").style = " transform: rotate(180deg);";
+      footNavOpenState = 1;
+       
+   }
+    else { document.getElementById("arrow2").style = " transform: rotate(0deg); ";
+
+      footNavOpenState = 0;
+   }
+}
+    
+    
+var footNavOpenState = 0;
+
+function arrowRotate3() {
+
+   if ( footNavOpenState == 0) {  
+
+      document.getElementById("arrow3").style = " transform: rotate(180deg);";
+      footNavOpenState = 1;
+       
+   }
+    else { document.getElementById("arrow3").style = " transform: rotate(0deg); ";
+
+      footNavOpenState = 0;
+   }
+}    
+  
+    
+var footNavOpenState = 0;
+
+function arrowRotate4() {
+
+   if ( footNavOpenState == 0) {  
+
+      document.getElementById("arrow4").style = " transform: rotate(180deg);";
+      footNavOpenState = 1;
+       
+   }
+    else { document.getElementById("arrow4").style = " transform: rotate(0deg); ";
+
+      footNavOpenState = 0;
+   }
+}    
+
+    
+    
+    
+</script> 
+
+<!-- <script>
+ $(function(){
+  var sBtn = $(".gnb_menu");    //  ul > li 이를 sBtn에 저장!
+  sBtn.find("a").click(function(){   // sBtn에 속해 있는  a 찾아 클릭 하면.
+   sBtn.find("a").removeClass("active");     // sBtn 속에 (active) 클래스를 삭제 한다.
+   $(this).addClass("active");// 클릭한 a에 (active)클래스를 넣는다.
+   
+  })
+ })
+ </script>  근데 이 방법은 active상태에서 클릭시 active가 remove되지 않는 문제가 있음-->
+   
+ 
+</head>
+<body>
+    <header>
+      <nav id="gnb">
+        <div class="gnb_wrap">
+            <ul class="gnb_main">
+                <li class="gnb_logo"><a href="index.html"><img src="img/1.png"></a></li>
+                <li class="gnb_menu">
+                    <a href="">Vehicles</a>
+                    <ul class="menu1" id="menu_toggle">
+                        <div class="menu1_wrap">
+                         <div class="menu1_con_left">
+                            <ul>
+                                <h2>Vehicles</h2>
+                                <li><a href="">Special Offers</a></li>
+                                <li><a href="">Compare Vehicles</a></li>
+                                <li><a href="">Mercedes-AMG</a></li>
+                                <li><a href="">Certified Pre-Owned</a></li>
+                                <li><a href="">EQ Electric</a></li>
+                                <li><a href="">All Vehicles</a></li>
+                                <li class="saved_v"><a href="">Saved Vehicles</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu1_con_right">
+                            <ul class="tab">
+                            <li><a class="active"href="">SUVs</a></li>
+                            <li><a href="">Sedans & Wagons</a></li>
+                            <li><a href="">Coupes</a></li>
+                            <li><a href="">Convertibles & Roadsters</a></li>
+                            <li><a href="">Hybrid & Electric</a></li>
+                            <li><a href="">Future & Concept</a></li>
+                            </ul>
+                            <ul class="list">
+                                <li>
+                                    <a href="">
+                                        <img src="img/8_1.jpg">
+                                        <h3>GLA SUV</h3>
+                                        <p>Starting at $36,230 *</p>
+                                        <span class="gnb_menu_point">Models</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <img src="img/11_1.jpg">
+                                        <h3>GLB SUV</h3>
+                                        <p>Starting at $36,600 *</p>
+                                        <span class="gnb_menu_point">Models</span>
+                                    </a>
+                                </li>
+                                <li class="last">
+                                    <a href="">
+                                        <img src="img/14_1.jpg">
+                                        <h3>GLC SUV</h3>
+                                        <p>Starting at $42,500 *</p>
+                                        <span class="gnb_menu_point">Models</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <img src="img/17.jpg">
+                                        <h3>GLC Coupe</h3>
+                                        <p>Starting at $50,000 *</p>
+                                        <span class="gnb_menu_point">Models</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <img src="img/20.jpg">
+                                        <h3>GLE SUV</h3>
+                                        <p>Starting at $54,570 *</p>
+                                        <span class="gnb_menu_point">Models</span>
+                                    </a>
+                                </li>
+                                <li class="last">
+                                    <a href="">
+                                        <img src="img/22.jpg">
+                                        <h3>GLE Coupe</h3>
+                                        <p>Starting at $76,500 *</p>
+                                        <span class="gnb_menu_point">Models</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <img src="img/24.jpg">
+                                        <h3>GLS SUV</h3>
+                                        <p>Starting at $76,000 *</p>
+                                        <span class="gnb_menu_point">Models</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <img src="img/26.jpg">
+                                        <h3>G-Class SUV</h3>
+                                        <p>Starting at $130,900 *</p>
+                                        <span class="gnb_menu_point">Models</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                      </div>
+                    </ul>
+                </li>
+                <li class="gnb_menu">
+                    <a>Shopping</a>
+                     <ul class="menu2" id="menu_toggle2">
+                        <div class="menu2_wrap">
+                         <div class="menu2_con_left">
+                            <div class="menu2_con_left_detail">
+                              <ul>
+                                <h2>Build & <span>Price</span></h2>
+                                <div class="line"></div>
+                                <li>
+                                  <a href="">Build Your Own</a>
+                                </li>
+                                <li>
+                                  <a href="">Compare Vehicles</a>
+                                </li>
+                                <li>
+                                  <a href="">Special Offers</a>
+                                </li>
+                                <li>
+                                  <a href="">Estimate Payment</a>
+                                </li>
+                                <li>
+                                  <a href="">Request a Quote</a>
+                                </li>
+                              </ul>
+                              <figure><img src="img/28.jpg"></figure>
+                            </div>
+                            <div class="menu2_con_left_detail left">
+                              <ul>
+                                <h2>Owners</h2>
+                                <div class="line"></div>
+                                <li>
+                                  <a href="">Maintenance</a>
+                                </li>
+                                <li>
+                                  <a href="">Owner's Support</a>
+                                </li>
+                                
+                              </ul>
+                              <figure><img src="img/30.jpg"></figure>
+                            </div>
+                            <div class="menu2_con_left_detail last2">
+                              <ul>
+                                <h2>Finance</h2>
+                                <div class="line"></div>
+                                <li>
+                                  <a href="">Financial Services</a>
+                                </li>
+                                <li>
+                                  <a href="">Apply for Credit</a>
+                                </li>
+                                <li>
+                                  <a href="">Trade-In Value</a>
+                                </li>
+                               
+                              </ul>
+                              <figure><img src="img/31.jpg"></figure>
+                            </div>
+                            <div class="menu2_con_left_detail last2 left">
+                              <ul>
+                                <h2>Accessories</h2>
+                                <div class="line"></div>
+                                <li>
+                                  <a href="">Vehicle Accessories</a>
+                                </li>
+                                <li>
+                                  <a href="">Lifestyle Accessories</a>
+                                </li>
+                              </ul>
+                              <figure><img src="img/33.jpg"></figure>
+                            </div>
+                            
+                        </div>
+                        <div class="menu2_con_right">
+                           <ul>
+                            <figure><img src="img/35.jpg"></figure>
+                            <h2>Special Offers</h2>
+                            <div class="line"></div>
+                            <li>
+                              <a href="">New Vehicle Offers</a>
+                            </li>
+                            <li>
+                              <a href="">Certified Pre-Owned Offers</a>
+                            </li>
+                          </ul>
+                          <div class="myid">
+                            <h2>My Mercedes me ID</h2>
+                            <div class="line"></div>
+                            <span>Even if you don’t own a Mercedes-Benz, you can register for an account to save builds, track inventory, set alerts and more.</span>
+                            <div class="myid_btn">
+                              <a class="btn_point" href=""><b>Log In</b></a>
+                              <a href="">Register <span>></span> </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </ul>
+                </li>
+                <li class="gnb_menu">
+                    <a>Inventory</a>
+                    <ul class="menu2" id="menu_toggle3">
+                      <div class="menu2_wrap">
+                       <div class="menu2_con_left">
+                          <div class="menu2_con_left_detail">
+                            <ul>
+                              <h2>New<br>Inventory</h2>
+                              <div class="line"></div>
+                              <li>
+                                <a href="">New Vehicles</a>
+                              </li>
+                            </ul>
+                            <figure><img src="img/37.jpg"></figure>
+                          </div>
+                          <div class="menu2_con_left_detail left">
+                            <ul>
+                              <h2>Certified <br>Pre‑Owned</h2>
+                              <div class="line"></div>
+                              <li>
+                                <a href="">View CPO Inventory</a>
+                              </li>
+                              <li>
+                                <a href="">See The Benefits</a>
+                              </li>
+                              <li>
+                                <a href="">Build Your Deal Online</a>
+                              </li>
+                              
+                            </ul>
+                            <figure><img src="img/39.jpg"></figure>
+                          </div>
+                      </div>
+                      <div class="menu2_con_right">
+                         <ul>
+                          <figure><img src="img/41.jpg"></figure>
+                        </ul>
+                        <div class="myid">
+                          <h2>Save Time and Shop Online</h2>
+                         
+                          <span>Shop select Certified Pre-Owned vehicles, and build your deal online in a few easy steps.</span>
+                          <div class="myid_btn">
+                            <a class="btn_point" href=""><b>How It Works</b></a>
+                            <a href="">Build Your Deal <span>></span> </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </ul>
+                </li>   
+            </ul>
+            <ul class="gnb_sub">
+                <li class="gnb_sub_find"><a href="">Find a Dealer</a></li>
+                <li class="gnb_sub_my"><a href="">My Account</a></li> 
+            </ul>
+        </div>
+      </nav>
+      <nav id="m_gnb">
+        <ul class="m_gnb_main">
+         <li class="m_gnb_blank">
+             
+         </li>
+         <li>
+            <a class="m_gnb_logo" href="#">
+            <img src="img/1.png"></a>
+          </li>
+         <li class="m_gnb_main_ltem">
+          <a href="#" id="m_gnb_main_button">
+             <span></span>
+             <span></span>
+             <span></span>
+          </a>
+         </li>
+      </ul>
+      <div id="m_gnb_menu">
+        <ul calss="m_gnb_menu_wrap">
+          <li class="m_gnb_menu_list" >
+            <a href=""  onclick="arrowRotate6()">Vehicles<i id="arrow6"></i></a>
+            <ul class="m_gnb_menu_list_detail">
+              <li class="m_gnb_menu_list_detail_li_car"><a href="">SUVs<i id="arrow7"></i></a></li>
+              <li class="m_gnb_menu_list_detail_li_car"><a href="">Sedans & Wagons<i id="arrow7"></i></a></li>
+              <li class="m_gnb_menu_list_detail_li_car"><a href="">Coupes<i id="arrow7"></i></a></li>
+              <li class="m_gnb_menu_list_detail_li_car"><a href="">Convertibles & Roadsters<i id="arrow6"></i></a></li>
+              <li class="m_gnb_menu_list_detail_li_car"><a href="">Hybrid & Electric<i id="arrow6"></i></a></li>
+              <li class="m_gnb_menu_list_detail_li_car"><a href="">Future & Concept<i id="arrow7"></i></a></li>
+              <li class="m_gnb_menu_list_detail_li"><a href="">Special Offers</a></li>
+              <li class="m_gnb_menu_list_detail_li"><a href="">Compare Vehicles</a></li>
+              <li class="m_gnb_menu_list_detail_li"><a href="">Mercedes-AMG</a></li>
+              <li class="m_gnb_menu_list_detail_li"><a href="">Certified Pre-Owned</a></li>
+              <li class="m_gnb_menu_list_detail_li"><a href="">EQ Electric</a></li>
+              <li class="m_gnb_menu_list_detail_li"><a href="">All Vehicles</a></li>
+              <li class="m_gnb_menu_list_detail_li"><a href="">Saved Vehicles</a></li>
+            </ul>
+          </li>
+          <li class="m_gnb_menu_list"><a href="">Shopping<i id="arrow"></i></a></li>
+          <li class="m_gnb_menu_list"><a href="">Inventory<i id="arrow"></i></a></li>
+          <li class="m_gnb_menu_list"><a href="">My Account<i id="arrow"></i></a></li>
+          <li class="m_gnb_menu_find"><a href="">Find a Dealer<i id="arrow"></i></a></li>
+         
+          <li>
+            <div class="m_gnb_menu_subscribe">
+              <div class="input_form">
+                  <input class="input" type="text" required="" maxlength="255" data-required="" aria-required="true">
+                  <label class="label">
+                      <span class="form__input_text">Enter ZIP Code or City,State</span>
+                  </label>
+              </div>
+              <div class="input_btn">
+                <a class="btn_normal" href="">Serch</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+    </header>
+    <main>
+ 
+     <section id="hero">
+         <div class="hero_con">
+            <div class="hero_wrap">
+                <div class="hero_text">
+                <span>1/2</span>
+                <h2>Rigorous Testing. Exceptional <span class="tablet">pricing.</span></h2>
+                <h3>Build your deal during the Certified Pre-Owned Sales Event.</h3>
+                <div class="hero_btn">
+                    <a class="btn_point" href="page2.html">View Offers</a>
+                    <a class="btn_normal" href="">Build Your Deal</a>
+                </div>
+                </div>
+            </div>
+             <div class="img_hotspot">
+                <ul>
+                    <li>
+                        <button>
+                            <span class="offscreen">GLC SUV</span>
+                        </button>
+                    </li>
+                </ul>
+            
+           </div>
+        </div>
+      </nav>
+     </section>
+     
+     <section id="hero_2">
+         <div class="hero_2_con" id="hero_2_con_fadein">
+            <div class="hero_wrap">
+                <div class="hero_text">
+                <span>2/2</span>
+                <h2>An E-Class for the road less <span class="tablet">traveled.</span></h2>
+                <h3>Adventure without sacrifice.</h3>
+                <div class="hero_btn">
+                    <a class="btn_point" href="">Explore</a>
+                    <a class="btn_normal" href="">Build Now</a>
+                </div>
+                </div>
+            </div>
+        </div>
+     </section>
+     <div class="hero_nav">
+        <span id="nav_one"><a href="#"></a></span>
+        <span id="nav_two"><a href="#hero_2"></a></span>
+    </div>
+   
+     <section id="main_shoppingtools">
+      <div class="main_shoppingtools_con">
+      <h3>SHOPPING TOOLS</h3>
+       <div class="shoppingtools_wrap">
+
+         <div class="shoppingtools_con">
+           <div class="con bg1">
+          </div>
+          <a href="">
+            <img src="img/car.png">
+            <h5>ALL VEHICLES</h5>
+          </a>
+         </div>
+         <div class="shoppingtools_con">
+           <div class="con bg2">
+           </div>
+           <a href="">
+            <img src="img/setting.png">
+            <h5>BUILD YOUR OWN</h5>
+           </a>
+          </div>
+         <div class="shoppingtools_con">
+            <div class="con bg3">
+            </div>
+            <a href="">
+              <img src="img/twinkle.png">
+              <h5>SPECIAL OFFERS</h5>
+             </a>
+          </div>
+         <div class="shoppingtools_con">
+           <div class="con bg4">
+            </div>
+            <a href="">
+              <img src="img/magnifier.png">
+              <h5>VIEW INVENTORY</h5>
+             </a>
+          </div>
+       </div>
+      </div>
+     </section>
+     <section id="main_sportlight">
+      <h3>IN THE SPOTLIGHT</h3>
+      <h2>Discover Mercedes-Benz</h2>
+      <div class="main_sportlight_wrap">
+         <div class="main_sportlight_con">
+            <ul>
+              <li class="main_sportlight_con_1">
+                <a href="">
+                 <img src="img/10_1.jpg" id="main_sportlight_con_img1">
+                  <div class="main_sportlight_con_text">
+                    <span>01</span>
+                    <div class="main_sportlight_con_text_info">
+                      <h3>Save Time and Shop Online</h3>
+                      <p>For select Certified Pre-Owned vehicles, you can build your deal in a few easy steps and finalize purchase with the dealer.</p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <div class="divide">
+              <li>
+                <a href="">
+                 <img src="img/11.jpg" id="main_sportlight_con_img2">
+                  <div class="main_sportlight_con_text">
+                    <span>02</span>
+                    <div class="main_sportlight_con_text_info">
+                      <h3>Dedicated service</h3>
+                      <p>Our team has what it takes to keep your Mercedes-Benz.</p>
+                    </div>
+                  </div>
+                 </a>
+              </li>
+              <li>
+                <a href="">
+                 <img src="img/12.jpg" id="main_sportlight_con_img3">
+                  <div class="main_sportlight_con_text">
+                    <span>03</span>
+                    <div class="main_sportlight_con_text_info">
+                      <h3>Mercedes me connect</h3>
+                      <p>For select Certified Pre-Owned vehicles, you can build your deal in a few easy steps and finalize purchase with the dealer.</p>
+                    </div>
+                  </div>
+                 </a>
+              </li>
+              </div>
+            </ul>
+        </div>
+          <div class="m_main_sportlight_con">
+          <div>
+            <a href="">
+             <img src="img/10_1_360.jpg">
+                  <div class="main_sportlight_con_text">
+                    <span>01</span>
+                    <div class="main_sportlight_con_text_info">
+                      <h3>Save Time and Shop Online</h3>
+                      <p>For select Certified Pre-Owned vehicles, you can build your deal in a few easy steps and finalize purchase with the dealer.</p>
+                    </div>
+                  </div>
+            </a>
+          </div>
+           <div>
+            <a href="">
+              <img src="img/11.jpg">
+                  <div class="main_sportlight_con_text">
+                    <span>02</span>
+                    <div class="main_sportlight_con_text_info">
+                      <h3>Dedicated service, exceptional care</h3>
+                      <p>Our team has what it takes to keep your Mercedes-Benz running at peak performance for miles to come.</p>
+                    </div>
+                  </div>
+            </a>
+          </div>
+           <div>
+            <a href="">
+             <img src="img/12.jpg">
+                  <div class="main_sportlight_con_text">
+                    <span>03</span>
+                    <div class="main_sportlight_con_text_info">
+                      <h3>Mercedes me connect</h3>
+                      <p>The latest connected vehicle services put your vehicle in the palm of your hand.</p>
+                    </div>
+                  </div>
+            </a>
+          </div>
+          
+      </div>
+      </div>
+      
+     </section>
+     <section id="main_future">
+        <h3>FUTURE VEHICLES</h3>
+        <h2>Upcoming Releases</h2>
+        <div class="main_future_selectbox">
+          <p><span>DISCOVER</span>The new 2021 Mercedes-Benz S-Class<span class="icon"></span></p>
+        </div>
+        <div class="main_future_wrap">
+          <figure><img src="img/13.jpg" id="main_future_img"></figure>
+          <div class="main_future_text">
+            <span>INTRODUCING</span>
+            <h2>The 2021 Mercedes-Benz S-Class</h2>
+              <h3>Luxury reaches a new milestone.</h3>
+              <div class="hero_btn">
+                <a class="btn_point" href="">Explor</a>  
+              </div>
+          </div>
+        </div>
+      </section>
+      <section id="main_acc">
+        <h3>MERCEDES-BENZ ACCESSORIES</h3>
+        <h2>For You and Your Vehicle</h2>
+        <div class="main_acc_wrap">
+          <ul>
+            <li>
+              <a href="">
+                <img src="img/14.jpg" id="main_acc_img1">
+                <div class="main_acc_text">
+                  <h5>
+                    Genuine Mercedes-Benz Vehicle Accessories
+                </h5>
+                  <p>
+                    Items made with greater personalization and added protection in mind. 
+                   </p>
+                  <div class="hero_btn">
+                    <a class="btn_point" href="">Shop Now</a>  
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="img/15.jpg" id="main_acc_img2">
+                <div class="main_acc_text">
+                  <h5>
+                    This year, add the three-pointed star to your everyday life.
+                </h5>
+                  <p>
+                    Craftsmanship and timeless style should extend beyond your vehicle. The Lifestyle Collection lets you express your passion wherever you go.
+                  </p>
+                  <div class="hero_btn">
+                    <a class="btn_point" href="">Shop Now</a>  
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div> 
+       </div>
+      </section>
+    </main>
+    <footer id="footer" class="inshadow">
+     <div class="footer_wrap">
+       <div class="footer_nav">
+       <ul>
+         <h2>Vehicles</h2>
+         <li><a href="">SUVs</a></li>
+         <li><a href="">Sedans & Wagons</a></li>
+         <li><a href="">Convertibles & Roadsters</a></li>
+         <li><a href="">Hybrid & Electric</a></li>
+         <li><a href="">All Vehicles</a></li>
+         <li><a href="">Future Vehicles</a></li>
+         <li><a href="">Certified Pre-Owned</a></li>
+         <li><a href="">Fleet Program</a></li>
+         <li><a href="">Mercedes-Benz Vans</a></li>
+       </ul>
+       <ul>
+        <h2>Shopping Tools</h2>
+        <li><a href="">Build</a></li>
+        <li><a href="">Compare Vehicles</a></li>
+        <li><a href="">Find a Dealer</a></li>
+        <li><a href="">View Inventory</a></li>
+        <li><a href="">Special Offers</a></li>
+        <li><a href="">Financial Services</a></li>
+        <li><a href="">Estimate a Payment</a></li>
+        <li><a href="">Request a Quote</a></li>
+        <li><a href="">Schedule a Test Drive</a></li>
+        <li><a href="">Apply for Credit</a></li>
+        <li><a href="">Trade-In Value</a></li>
+        <li><a href="">Brochures</a></li>
+      </ul>
+      <ul>
+        <h2>Owners</h2>
+        <li><a href=""><i>Mercedes me connect</i></a></li>
+        <li><a href=""><i>Mercedes me</i></a></li>
+        <li><a href="">Owners Support</a></li>
+        <li><a href="">Maintenance Support</a></li>
+        <li><a href="">Owners Manuals</a></li>
+        <li><a href="">Schedule Service</a></li>
+        <li><a href="">Accessories</a></li>
+        <li><a href="">Mobile Apps</a></li>
+        <li><a href="">Recall Information</a></li>
+      </ul>
+      <ul>
+        <h2>Discover Mercedes-Benz</h2>
+        <li><a href="">About Us</a></li>
+        <li><a href="">The Best or Nothing</a></li>
+        <li><a href="">What is CASE?</a></li>
+        <li><a href="">Mercedes-Benz EQ</a></li>
+        <li><a href="">For Enthusiasts</a></li>
+        <li><a href="">Events & Partnerships</a></li>
+        <li><a href="">European Delivery Program</a></li>
+        <li><a href="">Mercedes-Benz Military Program</a></li>
+        <li><a href="">Careers</a></li>
+        <li><a href="">Contact Us</a></li>
+      </ul>
+      </div>
+      <div class="m_footer_nav">
+         <ul>
+           <li class="m_footer_nav_h" onclick="arrowRotate()"><a href="">Vehicles<i id="arrow5"></i></a></li>
+            <div class="m_footer_nav_list">
+              <ul>
+                <li><a href="">SUVs</a></li>
+                <li><a href="">Sedans & Wagons</a></li>
+                <li><a href="">Convertibles & Roadsters</a></li>
+                <li><a href="">Hybrid & Electric</a></li>
+                <li><a href="">All Vehicles</a></li>
+                <li><a href="">Future Vehicles</a></li>
+                <li><a href="">Certified Pre-Owned</a></li>
+                <li><a href="">Fleet Program</a></li>
+                <li><a href="">Mercedes-Benz Vans</a></li>
+              </ul>
+             </div>
+           <li class="m_footer_nav_h" onclick="arrowRotate1()"><a href="">Shopping Tools<i id="arrow1"></i></a></li>
+             <div class="m_footer_nav_list">
+               <ul>
+                <li><a href="">Build</a></li>
+                <li><a href="">Compare Vehicles</a></li>
+                <li><a href="">Find a Dealer</a></li>
+                <li><a href="">View Inventory</a></li>
+                <li><a href="">Special Offers</a></li>
+                <li><a href="">Financial Services</a></li>
+                <li><a href="">Estimate a Payment</a></li>
+                <li><a href="">Request a Quote</a></li>
+                <li><a href="">Schedule a Test Drive</a></li>
+                <li><a href="">Apply for Credit</a></li>
+                <li><a href="">Trade-In Value</a></li>
+                <li><a href="">Brochures</a></li>
+               </ul>
+             </div>
+           <li class="m_footer_nav_h" onclick="arrowRotate2()"><a href="">Owners<i id="arrow2"></i></a></li>
+             <div class="m_footer_nav_list">
+               <ul>
+                <li><a href=""><i>Mercedes me connect</i></a></li>
+                <li><a href=""><i>Mercedes me</i></a></li>
+                <li><a href="">Owners Support</a></li>
+                <li><a href="">Maintenance Support</a></li>
+                <li><a href="">Owners Manuals</a></li>
+                <li><a href="">Schedule Service</a></li>
+                <li><a href="">Accessories</a></li>
+                <li><a href="">Mobile Apps</a></li>
+                <li><a href="">Recall Information</a></li>
+               </ul>
+             </div>
+           <li class="m_footer_nav_h" onclick="arrowRotate3()"><a href="">Discover Mercedes-Benz<i id="arrow3"></i></a></li>
+             <div class="m_footer_nav_list">
+               <ul>
+                <li><a href="">About Us</a></li>
+                <li><a href="">The Best or Nothing</a></li>
+                <li><a href="">What is CASE?</a></li>
+                <li><a href="">Mercedes-Benz EQ</a></li>
+                <li><a href="">For Enthusiasts</a></li>
+                <li><a href="">Events & Partnerships</a></li>
+                <li><a href="">European Delivery Program</a></li>
+                <li><a href="">Mercedes-Benz Military Program</a></li>
+                <li><a href="">Careers</a></li>
+                <li><a href="">Contact Us</a></li>
+               </ul>
+             </div>
+           <li class="m_footer_nav_h" onclick="arrowRotate4()"><a href="">Other Mercedes-Benz Sites<i id="arrow4"></i></a></li>
+             <div class="m_footer_nav_list">
+               <ul>
+                <li><a class="site_normal" href="">Mercedes-Benz Sites</a></li>
+                <li><a class="smart" href=""></a></li>
+                <li><a class="amg" href=""></a></li>
+                <li><a class="site_normal" href=""><i>Mercedes-Benz Financial Services</i></a></li>
+               </ul>
+             </div>
+         </ul>
+      </div>
+      <div class="stay_in">
+        <h2>Stay in Touch</h2>
+      </div>
+      <div class="email_sns">
+        <span>Receive the latest news, special offers and exclusives.</span>
+         <div class="email_sns_wrap">
+            <div class="subscribe">
+              <div class="input_form">
+                  <input class="input" type="text" required="" maxlength="255" data-required="" aria-required="true">
+                  <label class="label">
+                      <span class="form__input_text">Your email address*</span>
+                  </label>
+              </div>
+              <div class="input_btn">
+                <a class="btn_normal" href="">Subscribe</a>
+              </div>
+            </div>
+            <div class="sns">
+              <ul>
+                <li><a class="insta" href=""></a></li>
+                <li><a class="facebook" href=""></a></li>
+                <li><a class="twitter" href=""></a></li>
+                <li><a class="youtube" href=""></a></li>
+              </ul>
+            </div> 
+         </div>
+      </div>
+      <div class="other_site">
+        <h2>Other Mercedes-Benz Sites</h2>
+        <ul>
+          <li><a class="site_normal" href="">Mercedes-Benz Sites</a></li>
+          <li><a class="smart" href=""></a></li>
+          <li><a class="amg" href=""></a></li>
+          <li><a class="site_normal" href=""><i>Mercedes-Benz Financial Services</i></a></li>
+        </ul>
+      </div>
+    </div>
+      <section id="legal">
+        <div class="legal_wrap">
+          <ul class="legal_logo_wrap">
+            <a class="legal_logo" href=""><img src="img/1.png"></a>
+            <a class="legal_cc" href=""> ©2020 Mercedes-Benz USA, LLC</a>
+          </ul>
+          <div class="legal_snb">
+            <ul>
+              <li><a href="">Site Map</a></li>
+              <li><a href="">Privacy and Other Legal Notices</a></li>
+              <li><a href="">Do Not Sell My Personal Information</a></li>
+              <li><a href="">Interest-Based Ads</a></li>
+            </ul>
+          </div>
+          <div class="legal_dis">
+            <a href="">View Disclaimer
+            <i class="icon-mb"></i>
+          </a>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+<script>
+//gnb하단메뉴들이 스크롤다운시 위로 올라가 사라진 후 , gnb영역 및 블루 라인도 비활성화
+      $(window).scroll(function() {
+          if ($(this).scrollTop()>300)
+           {
+              $('#menu_toggle').slideUp(300);
+              $('#menu_toggle2').slideUp(300);
+              $('#menu_toggle3').slideUp(300);
+              $('.gnb_menu > a').removeClass('active');
+              $(".gnb_menu > a").parent('li').removeClass('blueline');
+           }
+       });
+//footer nav list 드롭다운
+       $( document ).ready( function() {
+        
+        $('.m_footer_nav_h').click(function() {
+          $(this).next('div').slideToggle(300);
+          return false;
+        });
+                
+           
+            });
+  
+//모바일 nav_list_open
+$( document ).ready( function() {
+        
+        $('.m_gnb_menu_list > a').click(function() {
+          $(this).next('ul').slideToggle(300);
+          $(this).toggleClass('active')
+          return false;
+        });
+                
+           
+            });
+
+
+</script>
+<script> //gnb메뉴가 스크롤 다운 시 사라지고 업하면 나타남
+
+(function(){
+
+var doc = document.documentElement;
+var w = window;
+
+var prevScroll = w.scrollY || doc.scrollTop;
+var curScroll;
+var direction = 0;
+var prevDirection = 0;
+
+var header = document.getElementById('gnb');
+
+var checkScroll = function() {
+
+  /*
+  ** Find the direction of scroll
+  ** 0 - initial, 1 - up, 2 - down
+  */
+
+  curScroll = w.scrollY || doc.scrollTop;
+  if (curScroll > prevScroll) { 
+    //scrolled up
+    direction = 2;
+  }
+  else if (curScroll < prevScroll) { 
+    //scrolled down
+    direction = 1;
+  }
+
+  if (direction !== prevDirection) {
+    toggleHeader(direction, curScroll);
+  }
+  
+  prevScroll = curScroll;
+};
+
+var toggleHeader = function(direction, curScroll) {
+  if (direction === 2 && curScroll > 80) { 
+
+
+    header.classList.add('hide');
+    prevDirection = direction;
+  }
+  else if (direction === 1) {
+    header.classList.remove('hide');
+    prevDirection = direction;
+  }
+};
+
+window.addEventListener('scroll', checkScroll);
+
+})();
+</script>
+
+<script>
+//모바일버전
+(function(){
+
+var doc = document.documentElement;
+var w = window;
+
+var prevScroll = w.scrollY || doc.scrollTop;
+var curScroll;
+var direction = 0;
+var prevDirection = 0;
+
+var header = document.getElementById('m_gnb');
+
+var checkScroll = function() {
+
+  /*
+  ** Find the direction of scroll
+  ** 0 - initial, 1 - up, 2 - down
+  */
+
+  curScroll = w.scrollY || doc.scrollTop;
+  if (curScroll > prevScroll) { 
+    //scrolled up
+    direction = 2;
+  }
+  else if (curScroll < prevScroll) { 
+    //scrolled down
+    direction = 1;
+  }
+
+  if (direction !== prevDirection) {
+    toggleHeader(direction, curScroll);
+  }
+  
+  prevScroll = curScroll;
+};
+
+var toggleHeader = function(direction, curScroll) {
+  if (direction === 2 && curScroll > 60) { 
+
+
+    header.classList.add('hide');
+    prevDirection = direction;
+  }
+  else if (direction === 1) {
+    header.classList.remove('hide');
+    prevDirection = direction;
+  }
+};
+
+window.addEventListener('scroll', checkScroll);
+
+})();
+
+
+
+
+
+
+ </script>
+    
+    
+  
+
+<!--       
+  <script> //우측 dot nav관련 스크립트
+        
+    window.onscroll = function() {dotNav()};
+    
+    function dotNav() {
+      console.log (document.body.scrollTop)
+      if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+        document.getElementById("nav_one").style = "background:rgb(0, 144, 255)";
+      } 
+      
+
+      if (document.body.scrollTop > 909 || document.documentElement.scrollTop > 909) {
+        document.getElementById("nav_two").style = "background:rgb(0, 144, 255)";
+      } else {
+        document.getElementById("nav_two").style = "background:#999";
+      };
+
+      if (document.body.scrollTop > 909 || document.documentElement.scrollTop > 909) {
+        document.getElementById("nav_one").style = "background:#999";
+      } 
+    }
+</script> -->
+ <script>  
+ //모바일버전 sportlight부분 슬라이드
+   $(document).ready(function(){
+      $('.m_main_sportlight_con').slick({
+        dots: true,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 1,
+      centerMode: false,
+      variableWidth: false
+      });
+    });
+
+//모바일버전 nav button and nav list
+    $(document).ready(function(){
+	$('#m_gnb_main_button').click(function(){
+		$(this).toggleClass('open');
+    $('#m_gnb_menu').toggleClass('m_gnb_active');
+	});
+});
+
+
+//fadein
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+          console.log (document.body.scrollTop)
+          if (document.body.scrollTop > 373) 
+        {
+            document.getElementById("hero_2_con_fadein") .style 
+            = "animation : visible 2s ease forwards ;";
+
+        }
+
+        // if (document.body.scrollTop > 2309)
+        // {
+        //     document.getElementById("main_sportlight_con_img1") .style 
+        //     = "animation : opacity 2s ease forwards ;";
+        //     document.getElementById("main_sportlight_con_img2") .style 
+        //     = "animation : opacity 2s 0.2s ease forwards ;";
+        // }
+
+        // if (document.body.scrollTop > 2350)
+        // {
+        //     document.getElementById("main_sportlight_con_img3") .style 
+        //     = "animation : opacity 2s ease forwards ;";
+          
+        // }
+          
+
+        if (document.body.scrollTop > 3300)
+        {
+            document.getElementById("main_future_img") .style 
+            = "animation : opacity 2s ease forwards ;";
+          
+        }
+        
+        if (document.body.scrollTop > 4000)
+        {
+            document.getElementById("main_acc_img1") .style 
+            = "animation : opacity 2s ease forwards ;";
+            document.getElementById("main_acc_img2") .style 
+            = "animation : opacity 2s 0.3s ease forwards ;";
+          
+        }
+        //우측 dotnav관련
+        if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+        document.getElementById("nav_one").style = "background:rgb(0, 144, 255)";
+        } 
+      
+
+       if (document.body.scrollTop > 909 || document.documentElement.scrollTop > 909) {
+        document.getElementById("nav_two").style = "background:rgb(0, 144, 255)";
+        } else {
+        document.getElementById("nav_two").style = "background:#999";
+        };
+
+       if (document.body.scrollTop > 909 || document.documentElement.scrollTop > 909) {
+        document.getElementById("nav_one").style = "background:#999";
+      } 
+
+
+
+
+          
+          }
+ </script> 
+</body>
+</html>
